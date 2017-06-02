@@ -1,0 +1,34 @@
+version: '2'
+services:
+  ttt:
+    depends_on:
+      - base
+    build: ttt/
+    ports: 
+      - "27015:27015"
+      - "27015:27015/udp"
+    environment:
+      - SRCDS_HOSTNAME=""
+      - SRCDS_MAP=ttt_minecraft_b5
+      - SRCDS_GAMEMODE=terrortown
+      - SRCDS_MAXPLAYERS=16
+      - SRCDS_RCON_PASSWORD=
+      - SRCDS_PORT=27015
+      - SRCDS_WORKSHOP_COLLECTION=
+      - SRCDS_AUTHKEY=
+      - SRCDS_ACCOUNTKEY=
+    volumes:
+      - workshop:/app/gmod/garrysmod/addons
+    image: local/srcds-gmod:ttt
+  base:
+      depends_on:
+          - steamcmd
+      build: base/
+      image: local/srcds-gmod:base
+  steamcmd:
+    build: steamcmd/
+    image: local/steamcmd
+volumes:
+    workshop:
+        external:
+            name: ttt-workshop-content

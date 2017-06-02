@@ -1,0 +1,9 @@
+
+@ShutdownOnFailedCommand 1
+@NoPromptForPassword 1
+login anonymous
+force_install_dir /app/gmod
+app_update 4020 validate
+force_install_dir /app/cstrike
+app_update 232330 validate
+quit
