@@ -3,9 +3,9 @@
 A Garry's Mod Trouble In Terrorist Town docker-compose configuration.
 
 ## Layers:
-- #### steamcmd: 
+- ### steamcmd: 
   Provides only the steamcmd cli tool. 
-- #### base: 
+- ### base: 
   Content layer containing the **GMod** and **CSS** SRCDS.
-- #### ttt: 
+- ### ttt: 
   Configuration layer with a workshop content volume.
