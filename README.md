@@ -1,4 +1,4 @@
-# srcds-gmod
+# compose-srcds-gmod
 
 A Garry's Mod Trouble In Terrorist Town docker-compose configuration.
 
